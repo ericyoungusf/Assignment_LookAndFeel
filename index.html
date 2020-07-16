@@ -1,6 +1,7 @@
 <!doctype html>
 <title>CSS Grid Template 2</title>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -16,36 +17,62 @@
             </tr>
         </table>
     </header>
-    <article id="mainArticle">
-        <div class="block-content">
-            <div class="view view-front-slideshow view-id-front_slideshow view-display-id-block front-slide-image view-dom-id-b92c68fa0cb73704fd578f5c460acbc5">
-                 <div class="view-content">
-                    <div class="owl-carousel-block6">
-                        <div class="item-0 item-odd">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/01/16/13/tampa-view.jpg?width=1368&height=912&fit=bounds&format=pjpg&auto=webp&quality=70" alt="City of Tampa employee on the phone working at the call center" width="500" ></div>  </div>
-                        </div><div class="item-1 item-even">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/fire_1.jpg" alt="City of Tampa fireman working at a fire station"></div>  </div>
-                        </div><div class="item-2 item-odd">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/fleet_3.jpg" alt="City of Tampa employee working on the maintenance of a City truck"></div>  </div>
-                        </div><div class="item-3 item-even">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/solid_waste_2.jpg" alt="City of Tampa employee picking up residential solid waste"></div>  </div>
-                        </div><div class="item-4 item-odd">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/transportation_1.jpg" alt="City of Tampa employee repairing a street light"></div>  </div>
-                        </div><div class="item-5 item-even">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/transportation_2.jpg" alt="City of Tampa crew installing a street light"></div>  </div>
-                        </div><div class="item-6 item-odd">
-                            <div class="views-field views-field-field-image">        <div class="field-content"><img class="lazyOwl" data-src="img/wastewater_1.jpg" alt="City of Tampa employees installing water pipes"></div>  </div>
-                        </div>
-                    </div>
-                </div>
+    <article id="mainArticle" style="text-align: center;display: inline-block">
+        <div class="slideshow-container" style="text-align: center;display: inline-block">
 
-
-
-
-
-
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="https://www.tampabay.com/resizer//d3ZAO-dvIXBQxyhlC-EhRzDqsVc=/1140x641/smart/arc-anglerfish-arc2-prod-tbt.s3.amazonaws.com/public/PKG7Y5WEREI6TKTRIBWI6S7HAY.jpg" style="width:100%">
+                <div class="text">Tampa Skyline</div>
             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="https://www.tampagov.net/sites/default/files/styles/slideshow_full_2016/public/web-team/images/fire_1.jpg?itok=Ews8Aqcb" style="width:100%">
+                <div class="text">Tampa Fire Rescue</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="https://www.tampagov.net/sites/default/files/styles/slideshow_full_2016/public/web-team/images/transportation_2.jpg?itok=m37JA-3r" style="width:100%">
+                <div class="text">Tampa Electric</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="https://www.tampagov.net/sites/default/files/styles/slideshow_full_2016/public/web-team/images/fleet_3.jpg?itok=Fh9WZXg4" style="width:100%">
+                <div class="text">Tampa Engineering</div>
+            </div>
+
         </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+        </script>
 
     </article>
     <nav id="mainNav">About Tampa <br />
