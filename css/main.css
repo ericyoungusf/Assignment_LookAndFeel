@@ -11,7 +11,7 @@ body {
     display: grid;
     grid-template-areas: "header header header" "nav article ads" "footer footer footer";
     grid-template-rows: 140px 1fr 70px;
-    grid-template-columns: 20% 1fr 25%;
+    grid-template-columns: 25% 1fr 20%;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
     height: 100vh;
@@ -31,7 +31,7 @@ footer, nav, div {
         font-family: "Lobster", serif;
         vertical-align: bottom;
         align-self: center;
-        display: inline-block";
+        display: inline-block;
     }
 td.head {
     padding-left: 60px;
