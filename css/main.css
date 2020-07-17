@@ -27,7 +27,12 @@ footer, nav, div {
     vertical-align:top;
 
 }
-
+    div.aboutproj {
+        font-family: "Lobster", serif;
+        vertical-align: bottom;
+        align-self: center;
+        display: inline-block";
+    }
 td.head {
     padding-left: 60px;
     font-family: "Lobster", serif;

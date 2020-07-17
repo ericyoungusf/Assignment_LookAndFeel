@@ -21,6 +21,10 @@
         </table>
     </header>
     <article id="mainArticle" style="text-align: center;display: inline-block">
+        <div class="aboutproj">
+            <a href="aboutProject.html">About Project</a>
+        </div>
+        <br />
         <div class="slideshow-container" style="text-align: center;display: inline-block">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 7</div>
@@ -80,25 +84,26 @@
             showSlides();
 
             function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 3000); // Change image every 3 seconds
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3000); // Change image every 3 seconds
             }
         </script>
 
     </article>
     <nav id="mainNav">
+
         <b>About Tampa :</b>
         <p>Tampa is a major city in, and the county seat of, Hillsborough County, Florida, United States. It is on the west coast of Florida on Tampa Bay, near the Gulf of Mexico. Tampa is the largest city in the Tampa Bay Area. With a population of 399,700 in 2019, Tampa is the third-largest city in Florida, after Miami and Jacksonville. The bay's port is the largest in the state, near downtown's Channel District. Bayshore Boulevard runs along the bay, and is east of the historic Hyde Park neighborhood.</p>
         <h2>Top Attractions:</h2>
@@ -113,6 +118,7 @@
             <li><a href="https://thedali.org/">Salvador Dali Museum</a></li>
             <li><a href="https://www.tampagov.net/riverwalk">The Tampa Riverwalk</a></li>
         </ul>
+        <br />
 
     </nav>
     <div id="siteAds">
