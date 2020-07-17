@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,10 +10,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
 </head>
 
-<body  class="body-content">
-    <div >
-        <canvas id="piechart"></canvas>
+<body class="body-content">
+    <header id="pageHeader">
+        <table>
+            <tr>
+                <td>
+                    <img src="https://www.tampagov.net/sites/all/themes/COT2015/logo.png" alt="City Logo" />
+                </td>
+                <td align="center" class="head">
+                    <H1>  Population of Cities around Tampa </H1>
+                </td>
+            </tr>
+        </table>
+    </header>
 
+    <div>
+        <canvas id="piechart"></canvas>
         <script>
             new Chart(document.getElementById("piechart"), {
                 type: 'pie',
@@ -28,7 +40,7 @@
                     ]
                 },
                 options: {
-                    legend: { display: false },
+                    legend: { display: true },
                     title: {
                         display: true,
                         text: 'Current population of Cities around Tampa (thousands)'
@@ -37,7 +49,7 @@
             });
         </script>
     </div>
-
+    <p><a href="tampa.html">Click here</a> to return to Home Page.</p>
     <!--JS link-->
     <script src="./js/main.js"></script>
 </body>
